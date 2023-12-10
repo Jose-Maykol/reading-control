@@ -1,5 +1,5 @@
 const moongose = require('mongoose')
-const { config } = require('../config/database.config')
+const { config } = require('../config/db.config')
 
 moongose.connect(config.connectionString, {
   useNewUrlParser: true,
