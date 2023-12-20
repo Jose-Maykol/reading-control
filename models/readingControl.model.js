@@ -6,7 +6,11 @@ const readingControlSchema = new Schema({
   title: String,
   text: String,
   total_questions: Number,
-  questions: [questionSchema]
+  questions: [questionSchema],
+  created_at: {
+    type: Date,
+    default: Date.now
+  }
 })
 
 const ReadingControl = mongoose.model('ReadingControl', readingControlSchema)

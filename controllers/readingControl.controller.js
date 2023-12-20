@@ -21,7 +21,7 @@ const addReadingControl = async (req, res) => {
 
 const getAllReadingControl = async (req, res) => {
   try {
-    const readings = await ReadingControl.find()
+    const readings = await ReadingControl.find().sort({ created_at: -1 })
     res.json({readings})
   } catch (err) {
     res.status(500).json({ message: err.message })
