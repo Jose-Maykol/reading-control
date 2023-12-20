@@ -5,7 +5,8 @@ const Schema = mongoose.Schema
 const questionSchema = new Schema({
   question_id: Number,
   question_text: String,
-  options: [optionSchema]
+  options: [optionSchema],
+  correct_answer_text: String
 })
 
 const Question = mongoose.model('Question', questionSchema)

@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const readingControlSchema = new Schema({
   title: String,
   text: String,
+  total_questions: Number,
   questions: [questionSchema]
 })
 
