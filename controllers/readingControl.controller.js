@@ -69,7 +69,7 @@ const calculateScore = async (req, res) => {
     let score = 0
     let correctQuestions = 0
     let incorrectQuestions = 0
-    let totalQuestions = 0
+    let totalQuestions = readingAssessment.total_questions
 
     const results = []
 
@@ -77,8 +77,6 @@ const calculateScore = async (req, res) => {
         const studentAnswer = studentAnswers.find(answer => answer.question_id === question.question_id);
 
         if (studentAnswer) {
-            totalQuestions++;
-
             const correctAnswer = question.correct_answer_text;
             const studentAnswerText = studentAnswer.answer_text;
 
